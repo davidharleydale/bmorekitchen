@@ -1,0 +1,130 @@
+body{
+    overflow-y:hidden!important;
+}
+
+p{
+    font-size: 17px;
+    line-height: 1.7em;
+}
+
+.main-content{
+    @include row();
+
+    .bmore-intro{
+        @include span-columns(10);
+        @include shift(1);
+        color: black;
+        margin-top: 80px;
+        display: table;
+
+        .intro-img{
+            width: 35%;
+            display: table-cell;
+            background-image: url("/images/main-content-img.png");
+            background-size: cover;
+
+        }
+
+        .intro-text{
+            display: table-cell;
+            border-top: 25px solid black;
+            width: 65%;
+
+            h1{
+                color: $red;
+                font-size: 5em;
+                background: white;
+                text-transform: uppercase;
+                font-weight: bold;
+                padding: .25em;
+                margin-left: -2.75em;
+            }
+
+            p{
+                margin: 0 2em 1em;
+            }
+
+        }
+    }
+
+    #map{
+        @include span-columns(12);
+        margin-top: 80px;
+        width: 100%;
+        height: 710px;
+
+    }
+
+    .floor-plans{
+        @include span-columns(10);
+        @include shift(1);
+        height: 600px;
+        margin-top: 80px;
+
+        h1{
+            color: $red;
+            text-transform: uppercase;
+            font-size: 40px;
+            font-weight: bold;
+            margin-bottom: 1em;
+        }
+    }
+
+    .image-grid{
+        @include span-columns(10);
+        @include shift(1);
+        margin-top: 80px;
+        margin-bottom: 80px;
+
+        img{
+            width: 100%;
+        }
+    }
+
+    .mem-contact{
+        @include span-columns(12);
+        background: $red;
+        .mem-content{
+            @include span-columns(10);
+            @include shift(1);
+            margin-top: 80px;
+            margin-bottom: 60px;
+
+            h1{
+                color: white;
+                text-transform: uppercase;
+                font-size: 40px;
+                font-weight: bold;
+                margin-bottom: 1em;
+            }
+
+            p{
+                margin: 0 0 1em 0;
+                color: white;
+            }
+
+            .membership{
+                @include span-columns(10);
+
+                @include media($desktop) {
+                    @include span-columns(6);
+                }
+            }
+
+            .contact{
+                @include span-columns(10);
+
+                h1{
+                    margin-bottom: .25em;
+                }
+
+                @include media($desktop) {
+                    @include span-columns(5);
+                    @include shift(1);
+
+                }
+            }
+        }
+    }
+
+}

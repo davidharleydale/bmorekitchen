@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<head>
+  <title>B-More Kitchen</title>
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <script src="https://use.typekit.net/sjr8iak.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+  <script type="text/javascript" src="js/snazzy.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><img src="/images/logo.svg"></div>
+            <ul class="main-nav">
+                <li>
+                    <a href="#">Our Story</a>
+                </li>
+                <li>
+                    <a href="#">Location</a>
+                </li>
+                <li>
+                    <a href="#">Floor Plan</a>
+                </li>
+                <li>
+                    <a href="#">Catering &amp; Events</a>
+                </li>
+                <li>
+                    <a href="#">Membership</a>
+                </li>
+                <li>
+                    <a href="#">Contact Us</a>
+                </li>
+            </ul>
+
+            <ul class="social-nav">
+                <li>T</li>
+                <li>F</li>
+                <li>G</li>
+                <li>T</li>
+                <li>I</li>
+            </ul>
+        </nav>
+    </header>
+
+
+<section class="main-content">
+
+<div class="bmore-intro">
+    <div class="intro-img"></div>
+    <div class="intro-text">
+        <h1>B-More Kitchen</h1>
+        <p>Baltimore is home to a growing community of independent food makers. These entrepreneurs are dedicated to their craft and they’re doing whatever it takes to make their dreams a reality. They are getting by on hard work and ingenuity, but they need more. They need resources to grow their businesses. They need licensed commercial kitchen space, they need help getting their products on market shelves, and they need help with the logistics so they can stay focused on their craft.</p>
+
+        <p>B-more Kitchen was created, in partnership with D.C.’s Union Kitchen, to provide Baltimore’s food entrepreneurs with the space and the resources they need to grow their businesses.</p>
+
+        <p>As Baltimore’s first food incubator, B-more Kitchen will be more than just a shared workspace. It will be a collection of the resources that food businesses crave: 24/7 access to a 10,000 square foot fully-equipped commercial kitchen; an ever-expanding marketing and distribution network; a stunning 300-person event space; and a catering program featuring food made by the incubator’s members.</p>
+
+        <p>Being a part of B-more Kitchen means working alongside some of the area's most creative makers. It means being a part of Baltimore's growing food community.</p>
+    </div>
+</div>
+
+<div id="map"></div>
+
+<div class="floor-plans">
+    <h1>floor plan</h1>
+</div>
+
+<div class="image-grid">
+    <img src="/images/img-grid.png">
+</div>
+
+<div class="mem-contact">
+    <div class="mem-content">
+            <div class="membership">
+                <h1>Membership</h1>
+                <p>
+                B-more Kitchen's goal is to help our members grow their businesses. For a monthly fee, members will have 24/7 access to a fully equipped, 10,000 square foot commercial kitchen. B-more Kitchen will also provide members with licensing support, marketing and branding assistance, and access to capital. Our distribution service will place our members' products in major grocery stores in the Mid-Atlantic area. Members will also generate additional revenue through our in-house catering program and event space.</p>
+
+                <p>We are looking for local food entrepreneurs with great products, viable business models, and an unshakable determination. If you're interested in becoming a member, fill out the contact form.</p>
+            </div>
+            <div class="contact">
+                <h1>Contact Us</h1>
+                <section class="content bgcolor-4">
+				<span class="input input--ruri">
+					<input class="input__field input__field--ruri" type="text" id="input-26" />
+					<label class="input__label input__label--ruri" for="input-26">
+						<span class="input__label-content input__label-content--ruri">Username</span>
+					</label>
+				</span>
+				<span class="input input--ruri">
+					<input class="input__field input__field--ruri" type="text" id="input-27" />
+					<label class="input__label input__label--ruri" for="input-27">
+						<span class="input__label-content input__label-content--ruri">Website</span>
+					</label>
+				</span>
+				<span class="input input--ruri">
+					<input class="input__field input__field--ruri" type="text" id="input-28" />
+					<label class="input__label input__label--ruri" for="input-28">
+						<span class="input__label-content input__label-content--ruri">Invitation Code</span>
+					</label>
+				</span>
+			</section>
+            </div>
+    </div>
+</div>
+
+
+
+</section>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-logo"><img src="/images/logo.svg"></div>
+    </div>
+</footer>
+
+    <!-- build:js scripts/site.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/jquery-ui/jquery-ui.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    <script src="js/classie.js"></script>
+    <script>
+			(function() {
+				// trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+				if (!String.prototype.trim) {
+					(function() {
+						// Make sure we trim BOM and NBSP
+						var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+						String.prototype.trim = function() {
+							return this.replace(rtrim, '');
+						};
+					})();
+				}
+
+				[].slice.call( document.querySelectorAll( 'input.input__field' ) ).forEach( function( inputEl ) {
+					// in case the input is already filled..
+					if( inputEl.value.trim() !== '' ) {
+						classie.add( inputEl.parentNode, 'input--filled' );
+					}
+
+					// events:
+					inputEl.addEventListener( 'focus', onInputFocus );
+					inputEl.addEventListener( 'blur', onInputBlur );
+				} );
+
+				function onInputFocus( ev ) {
+					classie.add( ev.target.parentNode, 'input--filled' );
+				}
+
+				function onInputBlur( ev ) {
+					if( ev.target.value.trim() === '' ) {
+						classie.remove( ev.target.parentNode, 'input--filled' );
+					}
+				}
+			})();
+		</script>
+
+</body>
+
+</html>

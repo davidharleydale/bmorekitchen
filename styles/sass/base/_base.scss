@@ -1,0 +1,5 @@
+// //Break points
+$mobile: new-breakpoint(min-width 480px);
+$tablet: new-breakpoint(min-width 800px);
+$desktop: new-breakpoint(min-width 1000px);
+$desktop-hd: new-breakpoint(min-width 1200px);
