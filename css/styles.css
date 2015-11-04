@@ -167,7 +167,7 @@ header {
   display: block;
   height: 100vh;
   border-bottom: 20px solid #DD452F;
-  background-image: url("/images/header-bg.png");
+  background-image: url("/bmorekitchen/images/header-bg.png");
   background-size: cover;
   position: relative; }
   header::after {
@@ -274,7 +274,7 @@ p {
     .main-content .bmore-intro .intro-img {
       width: 35%;
       display: table-cell;
-      background-image: url("/images/main-content-img.png");
+      background-image: url("/bmorekitchen/images/main-content-img.png");
       background-size: cover; }
     .main-content .bmore-intro .intro-text {
       display: table-cell;
